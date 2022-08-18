@@ -6,5 +6,9 @@ app = Flask(__name__)
 def ping():
     return jsonify({"message": "pong!!"})
 
+@app.route('/products', methods=['GET'])
+def getProducts():
+    return jsonify({"products": products, "message": "Lista Completa"})
+
 if __name__ == '__main__':
     app.run(debug=True, port=4500)
