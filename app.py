@@ -2,8 +2,6 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-from products import products
-
 @app.route('/ping')
 def ping():
     return jsonify({"message": "pong!!"})
